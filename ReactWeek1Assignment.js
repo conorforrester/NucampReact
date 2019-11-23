@@ -14,14 +14,17 @@ class Bootcamp {
     }
 
     registerStudent(student) {
-        //idea is to compare student position of 1 (email) to the Bootcamp students
-        //Thought about using includes method since we can't set email = entire array
-        if (this.students.includes(Student.email)) {
+        
+        if (this.students.filter(student => student.email === student.email).length) {
             // this.students = this.students;
-            console.log(`Cannot register ${student} because he/she is already registered`);
+            console.log(`Cannot register ${student.email} because he/she is already registered`);
         } else {
-            console.log(`The ${student} has been registered!`);
+            console.log(`Registering ${student.email} to the bootcamp Web Dev Fundamentals`);
             this.students.push(student);
         }
+        return this.students;
     }
 }
+
+const Neo = new Student ("Neo","neo@matrix.com","Pittsburgh");
+const bootcamp = new Bootcamp ("Web Dev Fundamentals","Beginner");
