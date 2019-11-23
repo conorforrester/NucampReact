@@ -26,5 +26,5 @@ class Bootcamp {
     }
 }
 
-const Neo = new Student ("Neo","neo@matrix.com","Pittsburgh");
+const newStudent = new Student ("Neo","neo@matrix.com","Pittsburgh");
 const bootcamp = new Bootcamp ("Web Dev Fundamentals","Beginner");
